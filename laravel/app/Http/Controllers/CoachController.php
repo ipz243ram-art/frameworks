@@ -61,7 +61,7 @@ public function show($id)
             'status' => 'success',
             'message' => 'Тренера успішно додано!',
             'created_data' => $newCoach
-        ], 21);
+        ], 201);
     }
     public function update(Request $request, $id)
     {
