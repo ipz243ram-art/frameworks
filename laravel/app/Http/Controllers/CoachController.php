@@ -29,6 +29,24 @@ class CoachController extends Controller
             'data' => self::$coaches
         ], 200);
     }
+public function show($id)
+    {
+        $coachId = (int)$id;
+
+        foreach (self::$coaches as $coach) {
+            if ($coach['id'] === $coachId) {
+                return response()->json([
+                    'status' => 'success',
+                    'data' => $coach
+                ], 200);
+            }
+        }
+
+        return response()->json([
+            'status' => 'error',
+            'message' => 'Тренера з таким ID не знайдено'
+        ], 404);
+    }
     public function store(Request $request)
     {
         $validated = $request->validate([

@@ -1,0 +1,56 @@
+{
+  "info": {
+    "_postman_id": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+    "name": "Laravel Coach API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Coaches (Отримати всіх)",
+      "request": {
+        "method": "GET",
+        "header": [{"key": "Accept", "value": "application/json", "type": "text"}],
+        "url": {"raw": "http://127.0.0.1:8000/api/coaches", "protocol": "http", "host": ["127","0","0","1"], "port": "8000", "path": ["api","coaches"]}
+      },
+      "response": []
+    },
+    {
+      "name": "Get One Coach (Отримати одного за ID)",
+      "request": {
+        "method": "GET",
+        "header": [{"key": "Accept", "value": "application/json", "type": "text"}],
+        "url": {"raw": "http://127.0.0.1:8000/api/coaches/1", "protocol": "http", "host": ["127","0","0","1"], "port": "8000", "path": ["api","coaches","1"]}
+      },
+      "response": []
+    },
+    {
+      "name": "Create Coach (Створити тренера)",
+      "request": {
+        "method": "POST",
+        "header": [{"key": "Accept", "value": "application/json", "type": "text"}, {"key": "Content-Type", "value": "application/json", "type": "text"}],
+        "body": {"mode": "raw", "raw": "{\n    \"name\": \"Арсеній Рудницький\",\n    \"specialty\": \"Силові тренування\",\n    \"focus\": \"Тренування нижньої частини тіла та втримання м'язової маси\",\n    \"experience_years\": 4\n}"},
+        "url": {"raw": "http://127.0.0.1:8000/api/coaches", "protocol": "http", "host": ["127","0","0","1"], "port": "8000", "path": ["api","coaches"]}
+      },
+      "response": []
+    },
+    {
+      "name": "Update Coach (Оновити дані)",
+      "request": {
+        "method": "PATCH",
+        "header": [{"key": "Accept", "value": "application/json", "type": "text"}, {"key": "Content-Type", "value": "application/json", "type": "text"}],
+        "body": {"mode": "raw", "raw": "{\n    \"focus\": \"Відновлення м'язів ніг та розвиток витривалості\"\n}"},
+        "url": {"raw": "http://127.0.0.1:8000/api/coaches/1", "protocol": "http", "host": ["127","0","0","1"], "port": "8000", "path": ["api","coaches","1"]}
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Coach (Видалити тренера)",
+      "request": {
+        "method": "DELETE",
+        "header": [{"key": "Accept", "value": "application/json", "type": "text"}],
+        "url": {"raw": "http://127.0.0.1:8000/api/coaches/1", "protocol": "http", "host": ["127","0","0","1"], "port": "8000", "path": ["api","coaches","1"]}
+      },
+      "response": []
+    }
+  ]
+}
